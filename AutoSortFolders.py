@@ -4,11 +4,17 @@
 
 # Auto Sort Folders
 
-# Specify mainpath to sort through files
-mainpath='/Users/jacobmannix/Desktop/folder'
+# Import dependencies
+import os
+import shutil
+
+mainpath = '/Users/jacobmannix/Desktop/folder'
 mainfiles = os.listdir(mainpath)
 
-# Folders and filetypes to create and sort
+singlefolder = '/media'
+if os.path.isdir(mainpath + singlefolder) == False:
+    os.mkdir(mainpath + singlefolder)
+
 folders = (
     ( # Images
         "/images",
@@ -29,9 +35,9 @@ folders = (
 )
 
 for path, types in folders:
-    if os.path.isdir(sourcepath + path) == True:
+    if os.path.isdir(mainpath + singlefolder + path) == True:
         for file in mainfiles:
             if file.endswith(types):
-                shutil.move(os.path.join(sourcepath, file), os.path.join(sourcepath + path, file))
+                shutil.move(os.path.join(mainpath, file), os.path.join(mainpath + singlefolder + path, file))
     else:
-        os.mkdir(sourcepath + path)
+        os.mkdir(mainpath + singlefolder + path)
