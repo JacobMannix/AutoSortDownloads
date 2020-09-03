@@ -2,7 +2,7 @@
 
 # Jacob Mannix [09-03-20]
 
-# Auto Sort Downloads
+# Auto Sort Folders
 
 # Specify mainpath to sort through files
 mainpath='/Users/jacobmannix/Desktop/folder'
