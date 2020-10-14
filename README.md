@@ -6,3 +6,7 @@
 > <b> Python script that automatically organizes a specified folder on mac. </b>
 
 Just change the main path in the script and run it to create and sort through the path.
+
+```python
+mainpath = '/Users/jacobmannix/Desktop/folder'
+```
